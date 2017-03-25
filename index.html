@@ -1,8 +1,11 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
 <p><button onclick="geoFindMe()">Show my location</button></p>
 <div id="out"></div>
-
-
 
 <script>
 function geoFindMe() {
@@ -31,5 +34,9 @@ function geoFindMe() {
 
 	output.innerHTML = "<p>Locating…</p>";
 
+	navigator.geolocation.getCurrentPosition(success, error);
+}
+</script>
 
-	</script>
+</body>
+</html>
