@@ -9,3 +9,9 @@
   display:table-cell;
   vertical-align:middle;
 }
+#home {
+  display: block;
+  max-width: 150px;
+  max-width: 150px;
+  height: auto;
+}
