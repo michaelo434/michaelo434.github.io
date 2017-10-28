@@ -1,42 +1,64 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
-<p><button onclick="geoFindMe()">Show my location</button></p>
-<div id="out"></div>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/temp.css" type="text/css">
+    <script language="javascript" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/bootstrap.min.js"></script>
+  </head>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Armani Villa Motel</a>
+    </div>
 
-<script>
-function geoFindMe() {
-	var output = document.getElementById("out");
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="" data-toggle="tab">
+	      <div class="text-center"><span>關於我們<br/>About Us</span></div>
+            </a>
+	</li>
+        <li><a href="" data-toggle="tab">
+	      <div class="text-center"><span>最新消息<br/>Hot News</span></div>
+            </a>
+	</li>
+        <li><a href="" data-toggle="tab">
+	      <div class="text-center"><span>精品旅館<br/>Introduction</span></div>
+            </a>
+	</li>
+        <li><a href="" data-toggle="tab">
+	      <div class="text-center"><span>留言板<br/>Message</span></div>
+            </a>
+	</li>
+        <li><a href="" data-toggle="tab">
+	      <div class="text-center"><span>房價查詢<br/>Price</span></div>
+            </a>
+	</li>
+        <li><a href="" data-toggle="tab">
+	      <div class="text-center"><span>客服專區<br/>Service</span></div>
+            </a>
+	</li>
+        <li><a href="" data-toggle="tab">
+	      <div class="text-center"><span>回首頁<br/>Home</span></div>
+            </a>
+	</li>
 
-	if (!navigator.geolocation){
-		output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
-		return;
-	}
 
-	function success(position) {
-		var latitude  = position.coords.latitude;
-		var longitude = position.coords.longitude;
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+  <body>
+    <h1>Hello</h1>
+    <button onclick="window.location.href='ctut.html'">Click Here</button>
 
-		output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
 
-		var img = new Image();
-		img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
-
-		output.appendChild(img);
-	}
-
-	function error() {
-		output.innerHTML = "Unable to retrieve your location";
-	}
-
-	output.innerHTML = "<p>Locating…</p>";
-
-	navigator.geolocation.getCurrentPosition(success, error);
-}
-</script>
-
-</body>
+  </body>
 </html>
